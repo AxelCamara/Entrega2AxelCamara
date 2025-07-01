@@ -8,38 +8,56 @@
     <title>Lecturas Abiertas</title>
 </head>
 <body>
-    <header>
+    <header class="header-index">
     <nav class="navbar navbar-expand-lg bg-absolute-dark navbar-green">
     <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- BOTÓN DROPDOWN (visible en mobile) -->
+        <ul class="navbar-nav d-md-none"> <!-- visible solo en mobile -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+            </a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="collage-de-libros.html">Collage</a></li>
+            <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+            </ul>
+        </li>
+        </ul>
+
+    <!-- NAVEGACIÓN DESKTOP (visible desde tablet para arriba) -->
+        <div class=" navbar-collapse d-none d-md-flex" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="http://127.0.0.1:3000/index.html">Inicio</a>
+                    <a class="nav-link" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:3000/catalogo-de-libros.html">Catalogo De Libros</a>
+                    <a class="nav-link" href="collage-de-libros.html">Collage De Libros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:3000/contacto.html">Contacto</a>
+                    <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
         </div>
     </div>
     </nav>
-    </header>
+</header>
     
     <main class="main-index">
         <h1>LECTURAS ABIERTAS</h1>
         <section class="sectioninicial">
+            <img class="portada" src="img/portada.png" alt="">
             <img class="libro" src="img/imagen1.webp" alt="">
             <img class="libro" src="img/imagen2.webp" alt="">
             <img class="libro" src="img/imagen3.png" alt="">
         </section>
-        <div> <p id="loreminicial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ex vitae deserunt atque ullam, tenetur ab nemo fuga voluptas quis deleniti veniam labore totam aut, nisi porro quod natus esse Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo repellat, eos non a voluptas dolorum ex vitae? Alias animi hic cum in delectus perspiciatis velit repudiandae error labore qui. Adipisci?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure mollitia asperiores animi fuga quia itaque ab vitae omnis quod saepe aspernatur natus iusto, consequuntur, doloremque magni possimus aperiam, tenetur Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos veritatis suscipit voluptate at illo. Molestiae sequi nobis voluptatem quam placeat, necessitatibus, soluta reiciendis excepturi et quis officiis obcaecati velit odio!asda</p></div>
+        <div class="div-inicial"><p id="loreminicial">Lecturas Abiertas: Tu Universo Literario Sin Límites</p>
+<p>Abiertas es más que una página de libros; es tu puerta de entrada a un universo literario sin fronteras. Aquí, creemos que cada historia tiene su lector, y por eso, te ofrecemos una colección inmensa y diversa de libros de todo tipo.</p> 
+<p>Explora,descubre y sumérgete. En Lecturas Abiertas, las posibilidades son tan amplias como tu imaginación.</p></div>
 
     </main>
     <footer>

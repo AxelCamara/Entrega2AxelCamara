@@ -1,0 +1,477 @@
+//variables
+@use 'abstracts/variables' as *;
+
+//mixin
+@use 'abstracts/mixin' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-bg-dark;
+}
+
+// Dropdown styles
+.dropdown {
+    display: block;
+    background-color: $color-green-transparent;
+    color: $color-white-full; 
+    border: 1px solid rgba($color-green-mid, 0.268);
+    border-radius: 15px;
+    font-size: 30px;
+
+&-toggle {
+    &::after {
+    display: none;
+    }
+}
+
+&-menu {
+    background-color: $color-bg-dark;
+
+    li a {
+    color: $color-black;
+    }
+}
+
+.dropdown-item:hover {
+    background-color: $color-green-hover;
+    color: $color-white-full;
+}
+}
+
+// Header Index
+.header-index {
+.navbar-nav {
+    &.me-auto {
+      // desktop nav ul container
+        @include respond-to(tablet) {
+        @include flex-center(row, flex-start, center, 50px);
+        padding: 15px 35px;
+
+.nav-item {
+    a {
+    color: $color-text-green-dark;
+
+&:hover {
+    color: $color-white-full;
+    }
+    }
+    }
+    }
+    }
+}
+
+.bg-absolute-dark {
+    background-color: $color-bg-black;
+}
+}
+
+.main-index {
+@include flex-center(row, center, stretch);
+    flex-wrap: wrap;
+    margin: 0;
+
+h1 {
+    display: flex;
+    color: $color-white-light;
+
+@include respond-to(desktop) {
+    color: $color-text-white;
+    font-size: 54px;
+    margin-bottom: -9px;
+    }
+}
+
+div p {
+    @include flex-center(row, center);
+    color: $color-white-light;
+    font-weight: 600;
+}
+
+.portada {
+    display: flex;
+    height: 32vh;
+    border: 2px solid $color-green-light;
+    border-radius: 10px;
+
+    @include respond-to(tablet) {
+    height: 45vh;
+    margin: 20px;
+    }
+
+@include respond-to(desktop) {
+    display: none;
+    }
+}
+
+.libro {
+    display: none;
+
+    @include respond-to(desktop) {
+    display: block;
+    }
+}
+
+.sectioninicial {
+    @include flex-center(row, center);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1%;
+    gap: 300px;
+
+@include respond-to(desktop) {
+    padding: 10px;
+}
+
+img {
+    height: 50vh;
+    border: 2px solid $color-green-light;
+    border-radius: 10px;
+    object-fit: contain;
+    }
+}
+
+.div-inicial {
+    border: 2px solid $color-green-light;
+    border-radius: 10px;
+    background-color: rgba(6, 122, 89, 0.318);
+
+#loreminicial {
+    font-size: 25px;
+    color: $color-white-full;
+    padding: 10px;
+    margin-top: 20px;
+    }
+}
+
+@include respond-to(tablet) {
+    background: linear-gradient($color-bg-black, transparent);
+    min-height: 80vh;
+}
+
+@include respond-to(desktop) {
+    background: linear-gradient($color-bg-black, transparent);
+    gap: 15px;
+    }
+}
+
+footer {
+table {
+    color: $color-white-light;
+
+&.footerinicial {
+    font-size: 15px;
+    margin-top: 45px;
+    color: $color-white-full;
+
+@include respond-to(desktop) {
+    height: 5vh;
+    }
+    }
+}
+}
+
+// Main Collage
+.main-collage {
+    height: 73vh;
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 25%);
+    gap: 1.5rem;
+    align-content: center;
+
+h1 {
+    text-align: center;
+    color: $color-text-white;
+    font-size: 54px;
+}
+
+img {
+    border: 2px solid $color-green-light;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-uno img {
+    object-position: 0 -79px;
+}
+.img-dos img {
+    object-position: top;
+}
+.img-tres img {
+    object-position: 0 -90px;
+}
+
+@include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 40vh);
+    gap: 15px;
+    margin: 30px;
+    height: auto;
+
+.img-cuatro {
+    display: block;
+    }
+.img-cinco {
+    display: none;
+    }
+}
+
+@include respond-to(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px) 100px;
+    align-content: center;
+    margin: 30px;
+    height: 80vh;
+
+.img-cuatro,
+.img-cinco {
+    display: block;
+    }
+
+.img-uno {
+    grid-column: 1;
+    grid-row: span 2;
+    }
+.img-dos {
+    grid-column: 2;
+    grid-row: 1;
+    }
+.img-tres {
+    grid-column: 2;
+    grid-row: 2;
+    }
+.img-cuatro {
+    grid-column: 3;
+    grid-row: 1;
+    }
+.img-cinco {
+    grid-column: 3;
+    grid-row: 2;
+    }
+}
+}
+
+// Footer Collage
+.footer-collage {
+    font-size: 15px;
+    margin-top: 45px;
+    color: $color-white-full;
+    text-align: center;
+
+@include respond-to(desktop) {
+    height: 5vh;
+}
+}
+
+// Contacto styles
+.header-contacto {
+.navbar-nav-nav {
+    list-style-type: none;
+    padding: 10px 20px;
+
+    .nav-link {
+    color: $color-black;
+    @include flex-center(row, flex-start, center, 20px);
+
+&:hover {
+        color: $color-white-full;
+    }
+    }
+
+.nav-item {
+a {
+        color: $color-black;
+    }
+    }
+}
+
+.navbar-collapse {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    background-color: $color-bg-dark;
+    padding: 10px 20px;
+}
+}
+
+.maincontacto {
+h2 {
+    display: none;
+}
+
+h3 {
+    &.oculto {
+    display: flex;
+    justify-content: center;
+    color: $color-white-full;
+    font-size: 23px;
+    padding-bottom: 20px;
+    }
+    &.completa {
+    display: flex;
+    justify-content: center;
+    color: $color-white-full;
+    margin: 6px;
+    }
+}
+
+.sectioncontacto {
+    @include flex-center(row, center);
+    padding: 30px;
+    color: $color-white-full;
+
+div {
+@include flex-center(row, center);
+    margin: 20px 0;
+    font-size: 20px;
+    padding: 0 50px;
+
+input[type='text'],
+input[type='email'],
+textarea {
+    background-color: $color-black-transparent;
+    color: $color-text-gray-light;
+    border: 1px solid black;
+    border-radius: 5px;
+
+        &:focus {
+        outline: none;
+        }
+    }
+
+input[type='text'] {
+        margin: 0;
+        padding: 8px 0;
+        font-size: 16px;
+        width: 100%;
+}
+
+input[type='email'] {
+        margin: 0 20px 0 80px;
+        padding: 15px 0;
+        font-size: 16px;
+        width: 100%;
+}
+
+textarea[name='mensaje'] {
+        margin: 10px 20px 0 85px;
+        padding: 5px;
+        font-size: 16px;
+        width: 100%;
+}
+
+input[type='submit'] {
+        display: flex;
+        justify-content: center;
+        padding: 5px 100px;
+        margin: 50px 0 -70px 0;
+        color: $color-white-full;
+        background-color: $color-black-transparent-light;
+        cursor: pointer;
+        border-radius: 5px;
+
+@include respond-to(tablet) {
+        width: 50%;
+        padding: 10px;
+        margin: 20px auto 0 auto;
+        font-size: 18px;
+        }
+
+@include respond-to(desktop) {
+        width: auto;
+        padding: 10px 155px;
+        margin: 50px 20px 0 0;
+        font-size: 18px;
+        }
+    }
+    }
+}
+
+@include respond-to(tablet) {
+    h2 {
+    display: block;
+    font-size: 40px;
+    padding: 30px 10px 20px;
+    text-align: center;
+    }
+
+    h3.completa {
+    font-size: 24px;
+    text-align: center;
+    }
+
+    .sectioncontacto {
+    min-height: 70vh;
+    padding: 20px;
+    gap: 15px;
+
+    div {
+    width: 100%;
+
+        label {
+        font-size: 18px;
+        color: $color-white-full;
+        }
+    }
+    }
+}
+
+@include respond-to(desktop) {
+    h2 {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: 50px;
+    }
+
+    h3.completa {
+    font-size: 35px;
+    }
+
+    .sectioncontacto {
+    @include flex-center(row, center);
+    padding: 30px;
+    height: 60vh;
+
+    div {
+        margin: 20px;
+
+        input[type='text'] {
+        margin: 0 20px;
+        }
+
+        input[type='email'] {
+        margin: 0 20px 0 120px;
+        }
+
+        textarea[name='mensaje'] {
+        margin: 10px 20px -20px 100px;
+        padding: 8px;
+        }
+        }
+    }
+}
+}
+
+.footer-contacto {
+    font-size: 15px;
+    margin-top: 45px;
+    color: $color-white-full;
+
+@include respond-to(desktop) {
+    height: 5vh;
+    }
+}
+
