@@ -1,3 +1,4 @@
+@use 'variables' as *;
 // _mixin.scss
 @mixin respond-to($breakpoint) {
   @if $breakpoint == tablet {
@@ -47,7 +48,7 @@
 
 // Imagen con borde y redondeado
 @mixin imagen-default {
-  border: 2px solid $color-green_light;
+  border: 2px solid $color-green-light;
   border-radius: 10px;
   object-fit: cover;
 }
